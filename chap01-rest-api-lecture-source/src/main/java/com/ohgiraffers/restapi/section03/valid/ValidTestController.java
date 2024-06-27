@@ -59,7 +59,7 @@ public class ValidTestController {
 
     @PostMapping("/users")
     public ResponseEntity<?> registUser(@Valid @RequestBody UserDTO newUser) {
-        
+
         return ResponseEntity.created(URI.create("/valid/users/"+newUser.getNo())).build();
 
     }
